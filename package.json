@@ -1,0 +1,20 @@
+{
+  "name": "notification-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot will remove member from the chat group who has happy birthday",
+  "main": "server.js",
+  "author": "Andrew Schastlivtsev",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^9.4.0",
+    "dayjs": "^1.8.36",
+    "dotenv": "^8.2.0",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-route": "^3.2.0",
+    "nodemon": "^2.0.4",
+    "telegraf": "^3.38.0",
+    "uuid": "^8.3.0"
+  }
+}
