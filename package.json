@@ -16,5 +16,9 @@
     "nodemon": "^2.0.4",
     "telegraf": "^3.38.0",
     "uuid": "^8.3.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "debug": "nodemon --inspect index.js"
   }
 }

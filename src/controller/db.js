@@ -8,7 +8,7 @@ class DBController {
   }
   static async readDB() {
     const state = await fs.readFile(this.dbPath, "utf8");
-    if (!state) return [];
+    if (!state) return {};
     return JSON.parse(state);
   }
 }
