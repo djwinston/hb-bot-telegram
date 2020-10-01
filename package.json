@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "debug": "nodemon --inspect index.js"
+    "debug-nodemon": "nodemon --inspect index.js",
+    "debug-npm": "node --nolazy index.js"
   }
 }

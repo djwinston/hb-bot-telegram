@@ -1,4 +1,11 @@
 const dayjs = require("dayjs");
+const state = require("../state/index");
+
+const now = () => new Date().toLocaleString();
+
+setInterval(() => {
+  state.now = now();
+}, 5000);
 
 class TimeController {
   static weekday() {

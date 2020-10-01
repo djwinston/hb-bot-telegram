@@ -1,4 +1,5 @@
-import { telegramOptions } from "./../config/telegram";
+const telegramOptions = require("./../config/telegram");
+const { Telegram } = require("telegraf");
 
 const telegram = new Telegram(process.env.BOT_TOKEN, [telegramOptions]);
 // telegram.deleteWebhook();
@@ -9,4 +10,4 @@ const telegram = new Telegram(process.env.BOT_TOKEN, [telegramOptions]);
 // chat.then((result) => console.log(result));
 // update.then((update) => console.log(update));
 
-export default telegram;
+exports.default = telegram;
