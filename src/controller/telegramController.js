@@ -1,4 +1,4 @@
-const telegramOptions = require("./../config/telegram");
+const telegramOptions = require("../config/telegram");
 const { Telegram } = require("telegraf");
 
 const telegram = new Telegram(process.env.BOT_TOKEN, [telegramOptions]);

@@ -2,12 +2,12 @@
 
 require('dotenv').config()
 
-const bot = require('./src/controller/telegraf')
+const bot = require('./src/controller/telegrafController')
 const state = require('./src/state/')
-const dbController = require('./src/controller/db')
-const StateController = require('./src/controller/state')
-const TimeController = require('./src/controller/time')
-const UserController = require('./src/controller/users')
+const dbController = require('./src/controller/dbController')
+const StateController = require('./src/controller/stateController')
+const TimeController = require('./src/controller/timeController')
+const UserController = require('./src/controller/usersController')
 
 const parseDate = require('./src/helpers/parseDate')
 const logger = require('./src/helpers/logger')
@@ -20,6 +20,7 @@ bot.command('set', (ctx) => {
   const {id, first_name, last_name, username, is_bot} = ctx.update.message.from
   const user = {id, first_name, last_name, username, is_bot, birthday: date}
   UserController.addUser(user)
+  console.log(`TCL>>>: id`, id)
   logger('new users', state.users)
 })
 bot.command('time', (ctx) => {
@@ -39,4 +40,4 @@ bot.on('text', (ctx) => {
 
 bot.launch()
 StateController.init()
-console.log(state)
+
