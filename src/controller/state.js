@@ -12,7 +12,7 @@ class StateController extends DBController {
   static update(objectItem) {
     const result = Object.assign(state, objectItem);
     StateController.writeDB(result);
-    return Object.assign(state, objectItem);
+    // return Object.assign(state, objectItem);
   }
   static init() {
     return !state.chat_id && !state.users.length

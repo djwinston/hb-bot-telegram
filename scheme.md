@@ -14,3 +14,13 @@ bot commands
 - remove user from Object
 - find next BD from Object
 - notify channel about next birthday
+
+**USER**
+- add user date
+- add user
+- remove user
+- invite user to channel
+
+**INFO**
+ctx.message.entities - is bot command
+
